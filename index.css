@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+:root {
+    /* colors */
+    --cyan: hsl(179, 62%, 43%);
+    --yellow: hsl(71, 73%, 54%);
+    --lightGray: hsl(204, 43%, 93%);
+    --grayishBlue: hsl(218, 22%, 67%);
+
+    /* fonts */
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas: "text text"
+                         "sub whyUs";
+    grid-template-columns: 20% 20%;
+    grid-template-rows: 25% 30%;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--lightGray);
+}
+
+.text {
+    grid-area: text;
+    background-color: white;
+    padding: 5% 0% 0% 5%;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.p1 {
+    font-size: max(1.3rem, 1.5vw);
+    font-weight: 700;
+    color: var(--cyan);
+    margin-bottom: 2%;
+}
+
+.p2 {
+    font-size: max(0.8rem, 1vw);
+    font-weight: 700;
+    color: var(--yellow);
+    margin-bottom: 2%;
+}
+
+.p3 {
+    font-size: max(0.8rem, 1vw);
+    font-weight: 700;
+    color: var(--grayishBlue);
+}
+
+.sub {
+    grid-area: sub;
+    background-color: var(--cyan);
+    padding: 10% 0% 0% 10%;
+    color: white;
+    border-radius: 0px 0px 0px 5px;
+}
+
+.s1 {
+    font-size: max(1rem, 1vw);
+    font-weight: 700;
+    margin-bottom: 3%;
+}
+
+.s2 {
+    display: flex;
+    column-gap: 3%;
+    margin-bottom: 2%;
+}
+
+.s3 {
+    font-size: max(0.8rem, 0.8vw);
+    opacity: 0.8;
+    margin-bottom: 7%;
+}
+
+button {
+    width: 90%;
+    padding: 4%;
+    background-color: var(--yellow);
+    font-family: 'Karla', sans-serif;
+    font-size: max(0.8rem, 0.8vw);
+    font-weight: 700;
+    color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--yellow);
+    border-radius: 5px / 5px;
+}
+
+.whyUs {
+    grid-area: whyUs;
+    background-color: hsl(179, 62%, 48%);
+    padding: 10% 0% 0% 10%;
+    border-radius: 0px 0px 5px 0px;
+}
