@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition: all 100ms linear;
 }
 
 body {
@@ -24,6 +25,8 @@ body {
 main {
     height: 100%;
     width: 100%;
+    min-height: 670px;
+    min-width: 570px;
     display: grid;
     grid-template-areas: "text text"
                          "sub whyUs";
@@ -39,6 +42,7 @@ main {
     background-color: white;
     padding: 5% 0% 0% 5%;
     border-radius: 5px 5px 0px 0px;
+    filter: drop-shadow(0px 0px 5px hsl(202, 8%, 80%));
 }
 
 .p1 {
@@ -67,6 +71,7 @@ main {
     padding: 10% 0% 0% 10%;
     color: white;
     border-radius: 0px 0px 0px 5px;
+    filter: drop-shadow(0px 0px 5px hsl(202, 8%, 80%));
 }
 
 .s1 {
@@ -99,6 +104,7 @@ button {
     border-width: 1px;
     border-color: var(--yellow);
     border-radius: 5px / 5px;
+    filter: drop-shadow(0px 0px 5px hsl(202, 8%, 80%));
 }
 
 .whyUs {
@@ -106,4 +112,48 @@ button {
     background-color: hsl(179, 62%, 48%);
     padding: 10% 0% 0% 10%;
     border-radius: 0px 0px 5px 0px;
+    color: white;
+    filter: drop-shadow(0px 0px 5px hsl(202, 8%, 80%));
+}
+
+.u1 {
+    font-size: max(1rem, 1vw);
+    font-weight: 700;
+    margin-bottom: 3%;
+}
+
+.u2 {
+    font-size: max(0.75rem, 0.75vw);
+    font-weight: 400;
+    margin-bottom: 1%;
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 570px) {
+    main {
+        min-height: 710px;
+        min-width: 270px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text {
+        height: 30%;
+        width: 80%;
+    }
+
+    .sub {
+        height: 30%;
+        width: 80%;
+        padding: 5% 0% 0% 5%;
+        border-radius: 0px 0px 0px 0px;
+    }
+
+    .whyUs {
+        height: 30%;
+        width: 80%;
+        padding: 5% 0% 0% 5%;
+        border-radius: 0px 0px 5px 5px;
+    }
 }
